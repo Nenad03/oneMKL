@@ -67,7 +67,7 @@ cuSolver handle to the SYCL context.
 
 class CusolverScopedContextHandler {
     CUcontext original_;
-    sycl::context placedContext_;
+    sycl::context *placedContext_;
     bool needToRecover_;
     sycl::interop_handler &ih;
     static thread_local cusolver_handle<pi_context> handle_helper;
